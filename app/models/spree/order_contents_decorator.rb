@@ -21,7 +21,7 @@ module Spree
     #   line_item
     # end
 
-    def add_to_line_item_with_parts(variant, quantity, options = {})
+    def add_to_line_item_with_parts(variant, quantity, options = {}, ad_hoc_option_value_ids, product_customizations)
       add_to_line_item_without_parts(variant, quantity, options).
         tap do |line_item|
         populate_part_line_items(
